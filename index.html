@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--comentários-->
+  <!--comentários-->
+
   <head>
     <meta charset="UTF-8">
     <title>Consulta de Lojas</title>
@@ -9,6 +10,8 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Estilo próprio -->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -39,35 +42,19 @@
 
     </div>
 
+    <nav class="bottom-nav glass">
+      <button class="nav-btn danger" onclick="irSobre()">
+        <i class="bi bi-info-circle"></i>
+      </button>
 
+      <button class="nav-btn primary fab" onclick="irBusca()">
+        <i class="bi bi-search"></i>
+      </button>
 
-    
-<nav class="bottom-nav glass">
-  <button class="nav-btn danger" onclick="irSobre()">
-    <i class="bi bi-info-circle"></i>
-  </button>
-
-  <button class="nav-btn primary fab" onclick="irBusca()">
-    <i class="bi bi-search"></i>
-  </button>
-
-  <button class="nav-btn warning" onclick="acessoCadastro()">
-    <i class="bi bi-pencil-square"></i>
-  </button>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <button class="nav-btn warning" onclick="acessoCadastro()">
+        <i class="bi bi-pencil-square"></i>
+      </button>
+    </nav>
 
     <!-- JS SEMPRE NO FINAL E NA ORDEM CORRETA -->
     <script src="assets/js/db.js"></script>
@@ -93,6 +80,26 @@
           .catch(err => console.error("Erro ao registrar Service Worker", err));
       }
     </script>
+
+
+
+
+    <script>
+      function irBusca() {
+        window.location.href = "index.html"; // você já está nela, mas ok
+      }
+
+      function irSobre() {
+        window.location.href = "sobre.html"; // crie essa página depois
+      }
+
+      function acessoCadastro() {
+        const senha = prompt("Acesso restrito. Digite a senha:");
+        if (senha === "1234") window.location.href = "cadastro.html";
+        else alert("Senha incorreta.");
+      }
+    </script>
+
   </body>
 
 </html>

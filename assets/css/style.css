@@ -1,11 +1,13 @@
-html, body {
+html,
+body {
   background: #0b2a4a;
   height: 100%;
 }
 
 /* Splash screen */
 .splash-screen {
-  background-color: #f8f9fa; /* Cor de fundo */
+  background-color: #f8f9fa;
+  /* Cor de fundo */
   position: fixed;
   top: 0;
   left: 0;
@@ -14,16 +16,16 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.5s ease-out;
   opacity: 1;
 }
 
 /* Após carregamento */
 .splash-screen.hidden {
   opacity: 0;
-  pointer-events: none; /* Desativa o clique */
+  pointer-events: none;
+  /* Desativa o clique */
 }
-
 
 .bottom-nav {
   position: fixed;
@@ -35,8 +37,8 @@ html, body {
   justify-content: space-around;
   align-items: center;
   backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.15);
-  border-top: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-btn {
@@ -46,9 +48,17 @@ html, body {
   color: #fff;
 }
 
-.nav-btn.primary { color: #0d6efd; }
-.nav-btn.warning { color: #ffc107; }
-.nav-btn.danger  { color: #dc3545; }
+.nav-btn.primary {
+  color: #0d6efd;
+}
+
+.nav-btn.warning {
+  color: #ffc107;
+}
+
+.nav-btn.danger {
+  color: #dc3545;
+}
 
 .fab {
   background: #0d6efd;
@@ -57,10 +67,13 @@ html, body {
   height: 60px;
   border-radius: 50%;
   transform: translateY(-25%);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+body {
+  padding-bottom: 90px;
+}
 
-
-
-
+.bottom-nav {
+  z-index: 1000;
+}
