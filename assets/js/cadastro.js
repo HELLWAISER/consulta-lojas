@@ -75,17 +75,17 @@ function listarLojas() {
 
   lojas.forEach(loja => {
     lista.innerHTML += `
-      <div class="card p-2 mb-2">
-        <strong>${loja.fantasia}</strong>
-        <div>Número: ${loja.numero}</div>
-        <div>${loja.razao}</div>
+      <div class="card p-3 mb-3 loja-card">
+        <strong class="loja-nome">${loja.fantasia}</strong>
+        <div class="loja-info">Número: ${loja.numero}</div>
+        <div class="loja-info">${loja.razao}</div>
 
-        <div class="d-flex gap-2 mt-2">
-          <button class="btn btn-warning btn-sm" onclick="editar('${loja.numero}')">
-            Editar
+        <div class="loja-actions mt-3">
+          <button class="btn btn-edit" onclick="editar('${loja.numero}')">
+            ✏️ Editar
           </button>
-          <button class="btn btn-danger btn-sm" onclick="excluir('${loja.numero}')">
-            Excluir
+          <button class="btn btn-delete" onclick="excluir('${loja.numero}')">
+            🗑 Excluir
           </button>
         </div>
       </div>
